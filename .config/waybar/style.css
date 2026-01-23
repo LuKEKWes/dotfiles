@@ -1,0 +1,195 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 30%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient_f {
+  0% {
+    background-position: 0% 200%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 400% 200%;
+  }
+}
+@keyframes gradient_f_nh {
+  0% {
+    background-position: 0% 200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+}
+
+label.module {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  background-color: rgba(0, 27, 183, 0.2);
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 0px 2px;
+}
+
+window#waybar {
+  background: transparent;
+  color: #cdd6f4;
+  border: none;
+}
+
+.modules-center,
+.modules-right {
+  background-color: rgba(0, 27, 183, 0.2);
+  border-radius: 999px;
+  border: 2px solid #8dd8ff;
+}
+
+.modules-left {
+  background-color: rgba(0, 27, 183, 0.2);
+  border-radius: 999px;
+  border: 2px solid #8dd8ff;
+}
+
+/* MODULE STYLING */
+#workspaces button {
+  color: #cdd6f4;
+  background-color: transparent;
+  border-radius: 999px;
+  margin-left: 3px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#custom-power,
+#custom-quit,
+#custom-lock,
+#custom-reboot {
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+#custom-search {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+#workspaces button.active {
+  background: radial-gradient(circle, #001bb7, #0046ff, #5409da, #4e71ff, #8dd8ff, #bbfbff);
+  color: #1e1e2e;
+  font-weight: bolder;
+  border-radius: 999px;
+  background-size: 400% 400%;
+  padding-left: 20px;
+  padding-right: 20px;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+  background-color: #cdd6f4;
+  color: #1e1e2e;
+}
+
+#cpu {
+  padding-left: 10px;
+}
+
+#window {
+  padding: 0 10px;
+  background-color: transparent;
+  border-radius: 999px;
+}
+
+#window:hover {
+  background-color: #a6adc8;
+  color: #1e1e2e;
+}
+
+#window.empty {
+  background-color: transparent;
+}
+
+#custom-swaync {
+  margin-left: 0px;
+  padding: 0 15px;
+  background-color: transparent;
+  border-radius: 999px;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#custom-swaync:hover {
+  background-color: #f8f8f7;
+  color: #1e1e2e;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#privacy {
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 999px;
+  min-width: 20px;
+  padding: 5px;
+}
+
+#taskbar button {
+  background-color: transparent;
+  border-radius: 999px;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#taskbar button.active {
+  background: radial-gradient(circle, #001bb7, #0046ff, #5409da, #4e71ff, #8dd8ff, #bbfbff);
+  border-radius: 999px;
+  background-size: 400% 400%;
+  padding-left: 15px;
+  padding-right: 15px;
+  animation: gradient_f 20s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#tray {
+  padding: 0 5px;
+  background-color: #cdd6f4;
+  border-radius: 999px;
+}
+
+#battery {
+  border-radius: 6px;
+  margin: 4px;
+  padding-right: 8px;
+  color: #cdd6f4;
+  background-color: rgba(0, 255, 0, 0.2);
+  min-width: 50px;
+  font-weight: bold;
+}
+
+/* Color changes based on battery level or state */
+#battery.charging {
+  color: rgba(255, 255, 0, 0.3);
+}
+
+#battery.warning {
+  color: rgba(255, 0, 0, 0.2);
+}
+
+#battery.critical {
+  color: rgba(255, 0, 0, 0.5);
+}
