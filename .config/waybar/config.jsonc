@@ -7,7 +7,8 @@
 		"backlight",
 		"group/system",
 		"custom/cava",
-		"pulseaudio",
+		//"pulseaudio",
+		"group/audio",
 		"battery",
 		"clock",
 		"tray",
@@ -109,6 +110,15 @@
 		"path": "/",
 	},
 
+	"group/audio": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 250,
+			"transition-left-to-right": true,
+		},
+		"modules": ["pulseaudio", "pulseaudio/slider"],
+	},
+
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-bluetooth": "{icon}󰂯 {volume}%",
@@ -118,6 +128,12 @@
 			"default": "",
 		},
 		"scroll-step": 5,
+	},
+
+	"pulseaudio/slider": {
+		"min": 0,
+		"max": 100,
+		"orientation": "horizontal",
 	},
 
 	"custom/cava": {
