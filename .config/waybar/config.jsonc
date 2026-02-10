@@ -1,270 +1,270 @@
 {
-	//***Layers***//
-	"layer": "top",
-	"modules-left": ["group/menu", "hyprland/workspaces"],
-	"modules-center": ["group/center", "privacy", "wlr/taskbar"],
-	"modules-right": [
-		"backlight",
-		"group/system",
-		"custom/cava",
-		//"pulseaudio",
-		"group/audio",
-		"battery",
-		"clock",
-		"tray",
-	],
+  //***Layers***//
+  "layer": "top",
+  "modules-left": ["group/menu", "hyprland/workspaces"],
+  "modules-center": ["group/center", "privacy", "wlr/taskbar"],
+  "modules-right": [
+    "backlight",
+    "group/system",
+    "custom/cava",
+    //"pulseaudio",
+    "group/audio",
+    "battery",
+    "clock",
+    "tray",
+  ],
 
-	"hyprland/workspaces": {
-		"format": "{windows}",
-		"format-icons": {
-			"active": "",
-			"default": "",
-		},
-		"on-click": "hyprctl dispatch workspace {name}",
-		"window-rewrite-default": "",
-		"window-rewrite": {
-			"class<zen>": "󰈹",
-			"class<dev.zed.Zed>": "",
-			"class<kitty>": "󰄛",
-			"class<com.mitchellh.ghostty>": "󰊠",
-			"class<org.gnome.Nautilus>": "",
-			"class<Notion>": "",
-			"class<spotify>": "󰓇",
-			"class<steam>": "",
-			"class<discord>": "Discord",
-		},
-	},
+  "hyprland/workspaces": {
+    "format": "{windows}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+    "on-click": "hyprctl dispatch workspace {name}",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<zen>": "󰈹",
+      "class<dev.zed.Zed>": "",
+      "class<kitty>": "󰄛",
+      "class<com.mitchellh.ghostty>": "󰊠",
+      "class<org.gnome.Nautilus>": "",
+      "class<Notion>": "",
+      "class<spotify>": "󰓇",
+      "class<steam>": "",
+      "class<discord>": "Discord",
+    },
+  },
 
-	"hyprland/window": {
-		"format": "",
-		"on-click": "swaync-client -t -sw",
-		"max-length": 25,
-		"icon": true,
-		"rewrite": {
-			"": "Desktop",
-		},
-	},
+  "hyprland/window": {
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+    "max-length": 25,
+    "icon": true,
+    "rewrite": {
+      "": "Desktop",
+    },
+  },
 
-	"privacy": {
-		"icon-spacing": 4,
-		"icon-size": 20,
-		"transition-duration": 250,
-		"modules": [
-			{
-				"type": "screenshare",
-				"tooltip": true,
-				"tooltip-icon-size": 24,
-			},
-			{
-				"type": "audio-out",
-				"tooltip": true,
-				"tooltip-icon-size": 24,
-			},
-			{
-				"type": "audio-in",
-				"tooltip": true,
-				"tooltip-icon-size": 24,
-			},
-		],
-		"ignore-monitor": true,
-		"ignore": [
-			{
-				"type": "audio-in",
-				"name": "cava",
-			},
-			{
-				"type": "screenshare",
-				"name": "obs",
-			},
-		],
-	},
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 20,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24,
+      },
+    ],
+    "ignore-monitor": true,
+    "ignore": [
+      {
+        "type": "audio-in",
+        "name": "cava",
+      },
+      {
+        "type": "screenshare",
+        "name": "obs",
+      },
+    ],
+  },
 
-	"backlight": {
-		"device": "amdgpu_bl1",
-		"format": "{icon} {percent}%",
-		"format-icons": ["", ""],
-	},
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "format-icons": [" ", " "],
+  },
 
-	"group/system": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 250,
-			"transition-left-to-right": false,
-		},
-		"modules": ["cpu", "memory", "disk"],
-	},
+  "group/system": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false,
+    },
+    "modules": ["cpu", "memory", "disk"],
+  },
 
-	"cpu": {
-		"format": " {usage}% | {avg_frequency}GHz",
-		"interval": 2,
-	},
+  "cpu": {
+    "format": "  {usage}% | {avg_frequency}GHz",
+    "interval": 2,
+  },
 
-	"memory": {
-		"format": " {used:0.1f}G",
-		"interval": 3,
-	},
+  "memory": {
+    "format": "  {used:0.1f}G",
+    "interval": 3,
+  },
 
-	"disk": {
-		"format": " {free}",
-		"interval": 10,
-		"path": "/",
-	},
+  "disk": {
+    "format": "  {free}",
+    "interval": 10,
+    "path": "/",
+  },
 
-	"group/audio": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 250,
-			"transition-left-to-right": true,
-		},
-		"modules": ["pulseaudio", "pulseaudio/slider"],
-	},
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": true,
+    },
+    "modules": ["pulseaudio", "pulseaudio/slider"],
+  },
 
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon}󰂯 {volume}%",
-		"format-muted": " muted",
-		"format-icons": {
-			"headphone": "󰋋",
-			"default": "",
-		},
-		"scroll-step": 5,
-	},
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon}󰂯 {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphone": "󰋋 ",
+      "default": " ",
+    },
+    "scroll-step": 5,
+  },
 
-	"pulseaudio/slider": {
-		"min": 0,
-		"max": 100,
-		"orientation": "horizontal",
-	},
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
 
-	"custom/cava": {
-		"exec": "~/.config/waybar/scripts/cava.sh",
-		"format": "{}",
-		"tooltip": false,
-		"on-click": "pavucontrol",
-	},
+  "custom/cava": {
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "pavucontrol",
+  },
 
-	"battery": {
-		"bat": "BAT0",
-		"interval": 1,
-		"states": {
-			"warning": 30,
-			"critical": 15,
-		},
-		"format": "{icon}  {capacity}%",
-		"format-icons": ["", "", "", "", ""],
-		"format-time": "{H}h {M}m",
-		"tooltip-format": "{capacity}% • {time}",
-		"tooltip-format-discharging": "{timeTo} until empty",
-		"tooltip-format-charging": "{timeTo} until full",
-		"max-length": 25,
-	},
+  "battery": {
+    "bat": "BAT0",
+    "interval": 1,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon}  {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-time": "{H}h {M}m",
+    "tooltip-format": "{capacity}% • {time}",
+    "tooltip-format-discharging": "{timeTo} until empty",
+    "tooltip-format-charging": "{timeTo} until full",
+    "max-length": 25,
+  },
 
-	"group/menu": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 250,
-			"children-class": "not-power",
-			"transition-left-to-right": true,
-		},
-		"modules": [
-			"custom/search",
-			"custom/power",
-			"custom/quit",
-			"custom/lock",
-			"custom/reboot",
-		],
-	},
+  "group/menu": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 250,
+      "children-class": "not-power",
+      "transition-left-to-right": true,
+    },
+    "modules": [
+      "custom/search",
+      "custom/power",
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot",
+    ],
+  },
 
-	"custom/search": {
-		"format": "",
-		"tooltip-format": "Menu",
-		"on-click": "wofi --show drun -n",
-	},
+  "custom/search": {
+    "format": "",
+    "tooltip-format": "Menu",
+    "on-click": "wofi --show drun -n",
+  },
 
-	"custom/quit": {
-		"format": "󰗼",
-		"tooltip-format": "Log out",
-		"on-click": "hyprctl dispatch exit",
-	},
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip-format": "Log out",
+    "on-click": "hyprctl dispatch exit",
+  },
 
-	"custom/lock": {
-		"format": "󰍁",
-		"tooltip-format": "Lock",
-		"on-click": "setsid /usr/bin/hyprlock >/dev/null 2>&1 &",
-	},
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip-format": "Lock",
+    "on-click": "setsid /usr/bin/hyprlock >/dev/null 2>&1 &",
+  },
 
-	"custom/reboot": {
-		"format": "󰜉",
-		"tooltip-format": "Reboot",
-		"on-click": "systemctl reboot",
-	},
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip-format": "Reboot",
+    "on-click": "systemctl reboot",
+  },
 
-	"custom/power": {
-		"format": "",
-		"tooltip-format": "Shut down",
-		"on-click": "systemctl poweroff",
-	},
+  "custom/power": {
+    "format": "",
+    "tooltip-format": "Shut down",
+    "on-click": "systemctl poweroff",
+  },
 
-	"clock": {
-		"format": "{:%H:%M}",
-		"format-alt": "{:%A, %B %d, %Y (%R)}",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>",
-		"calendar": {
-			"mode": "year",
-			"mode-mon-col": 3,
-			"weeks-pos": "right",
-			"on-scroll": 1,
-			"format": {
-				"months": "<span color='#ffead3'><b>{}</b></span>",
-				"days": "<span color='#ecc6d9'><b>{}</b></span>",
-				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-				"today": "<span color='#ff6699'><b><u>{}</u></b></span>",
-			},
-		},
-		"actions": {
-			"on-click-right": "mode",
-			"on-scroll-up": "tz_up",
-			"on-scroll-down": "tz_down",
-			"on-scroll-up": "shift_up",
-			"on-scroll-down": "shift_down",
-		},
-	},
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
 
-	"tray": {
-		"icon-size": 18,
-		"spacing": 5,
-	},
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5,
+  },
 
-	"wlr/taskbar": {
-		"icon-size": 16,
-		"tooltip-format": "{title}",
-		"on-click": "activate",
-		"on-click-right": "fullscreen",
-	},
+  "wlr/taskbar": {
+    "icon-size": 16,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-right": "fullscreen",
+  },
 
-	"group/center": {
-		"orientation": "inherit",
-		"drawer": {
-			"transition-duration": 250,
-			"transition-left-to-right": false,
-		},
-		"modules": ["custom/swaync", "custom/todo"],
-	},
+  "group/center": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false,
+    },
+    "modules": ["custom/swaync", "custom/todo"],
+  },
 
-	"custom/swaync": {
-		"format": "",
-		"on-click": "swaync-client -t -sw",
-	},
+  "custom/swaync": {
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+  },
 
-	"custom/todo": {
-		"format": "\u00a0{}",
-		"exec": "~/.config/waybar/scripts/todo/todo.sh",
-		"on-double-click": "~/.config/waybar/scripts/todo/todo.sh mark_done",
-		"on-click-right": "~/.config/waybar/scripts/todo/todo.sh open_tui",
-		"on-click-middle": "~/.config/waybar/scripts/todo/todo.sh middle_click",
-		"return-type": "json",
-		"interval": 5,
-		"tooltip": true,
-	},
+  "custom/todo": {
+    "format": " {}",
+    "exec": "~./todo/todo.sh",
+    "on-double-click": "./todo/todo.sh mark_done",
+    "on-click-right": "./todo/todo.sh open_tui",
+    "on-click-middle": "./todo/todo.sh middle_click",
+    "return-type": "json",
+    "interval": 5,
+    "tooltip": true,
+  },
 }

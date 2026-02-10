@@ -4,7 +4,7 @@
 TODO_DIR="$HOME/.config/waybar/scripts/todo"
 TASK_FILE="$TODO_DIR/tasks.txt"
 CONF_FILE="$TODO_DIR/todo.conf"
-TUI_SCRIPT="/home/luke/.config/waybar/scripts/todo/todo_tui.sh"
+TUI_SCRIPT="$TODO_DIR/todo_tui.sh"
 touch "$TASK_FILE"
 touch "$CONF_FILE"
 
