@@ -62,8 +62,12 @@ label.module {
 
 window#waybar {
 	background: transparent;
+	//background: rgba(0, 0, 0, 0.01);
 	color: $txt_col;
 	border: none;
+	opacity: 1;
+
+	//transition: opacity 0.1s ease-in-out;
 }
 
 .modules-center,
@@ -224,6 +228,23 @@ window#waybar {
 
 #battery.critical {
 	color: $bat_crit;
+}
+
+#power-profiles-daemon {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#power-profiles-daemon.performance {
+	background-color: $bat_crit;
+}
+
+#power-profiles-daemon.balanced {
+	background-color: $bat_charg;
+}
+
+#power-profiles-daemon.power-saver {
+	background-color: $bat_def;
 }
 
 #pulseaudio-slider {

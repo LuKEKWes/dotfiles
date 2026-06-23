@@ -49,6 +49,7 @@ window#waybar {
   background: transparent;
   color: #cdd6f4;
   border: none;
+  opacity: 1;
 }
 
 .modules-center,
@@ -192,6 +193,23 @@ window#waybar {
 
 #battery.critical {
   color: rgba(255, 0, 0, 0.5);
+}
+
+#power-profiles-daemon {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#power-profiles-daemon.performance {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#power-profiles-daemon.balanced {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: rgba(0, 255, 0, 0.2);
 }
 
 #pulseaudio-slider {
